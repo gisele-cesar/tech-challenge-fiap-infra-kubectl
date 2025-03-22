@@ -9,8 +9,8 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
-    env:
-      TF_ACTION: destroy # Change to 'destroy' to destroy the infrastructure or apply to create
+    # env:
+    #   TF_ACTION: destroy # Change to 'destroy' to destroy the infrastructure or apply to create
 
     steps:
     - name: Checkout code
@@ -33,5 +33,5 @@ jobs:
       working-directory: infra/terraform
 
     - name: Apply or Destroy Terraform
-      run: terraform ${TF_ACTION} -auto-approve
+      run: terraform destroy -auto-approve
       working-directory: infra/terraform
