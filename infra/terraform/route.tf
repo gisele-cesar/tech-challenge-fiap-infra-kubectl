@@ -1,6 +1,6 @@
 # routing table
 resource "aws_route_table" "private" {
-  vpc_id = aws_vpc.k8svpc.id
+  vpc_id = aws_vpc.k8s_vpc.id
 
   route {
       cidr_block                 = "0.0.0.0/0"
@@ -13,7 +13,7 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.k8svpc.id
+  vpc_id = aws_vpc.k8s_vpc.id
 
   route {
       cidr_block                 = "0.0.0.0/0"
