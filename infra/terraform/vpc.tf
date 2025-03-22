@@ -5,8 +5,3 @@ resource "aws_vpc" "k8s_vpc" {
     name = "k8s_vpc"
   }
 }
-
-resource "aws_subnet" "k8s_subnet" {
-  vpc_id     = aws_vpc.k8s_vpc.id
-  cidr_block = "10.0.1.0/24"
-}
