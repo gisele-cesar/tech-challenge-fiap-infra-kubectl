@@ -8,7 +8,7 @@ resource "aws_route_table" "private" {
     }
 
   tags = {
-    Name = "private"
+    name = "eks-private"
   }
 }
 
@@ -21,7 +21,7 @@ resource "aws_route_table" "public" {
     }
 
   tags = {
-    Name = "public"
+    name = "eks-public"
   }
 }
 
