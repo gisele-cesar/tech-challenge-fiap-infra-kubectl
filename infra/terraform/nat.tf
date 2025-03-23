@@ -3,7 +3,7 @@ resource "aws_eip" "nat" {
   associate_with_private_ip = null
 
   tags = {
-    name = "nat"
+    name = "nat-eks"
   }
 }
 
