@@ -1,5 +1,5 @@
 resource "aws_lb" "k8s_alb" {
-  name               = "fiap-fase-3"
+  name               = "fiap-fase-4"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.lb_sg.id]
