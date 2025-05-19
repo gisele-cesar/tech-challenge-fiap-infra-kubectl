@@ -9,7 +9,7 @@ resource "aws_subnet" "private-us-east-1a" {
   tags = {
     Name                              = "private-us-east-1a"
     "kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/fiap"      = "owned"
+    "kubernetes.io/cluster/eks-fiap"      = "owned"
   }
 }
 # private subnet 02
@@ -22,7 +22,7 @@ resource "aws_subnet" "private-us-east-1b" {
   tags = {
     Name                              = "private-us-east-1b"
     "kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/fiap"      = "owned"
+    "kubernetes.io/cluster/eks-fiap"      = "owned"
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_subnet" "public-us-east-1a" {
   tags = {
     Name                         = "public-us-east-1a"
     "kubernetes.io/role/elb"     = "1" #this instruct the kubernetes to create public load balancer in these subnets
-    "kubernetes.io/cluster/fiap" = "owned"
+    "kubernetes.io/cluster/eks-fiap" = "owned"
   }
 }
 # public subnet 02
@@ -51,6 +51,6 @@ resource "aws_subnet" "public-us-east-1b" {
   tags = {
     Name                         = "public-us-east-1b"
     "kubernetes.io/role/elb"     = "1" #this instruct the kubernetes to create public load balancer in these subnets
-    "kubernetes.io/cluster/fiap" = "owned"
+    "kubernetes.io/cluster/eks-fiap" = "owned"
   }
 }
