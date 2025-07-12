@@ -2,7 +2,7 @@
 # role for nodegroup
 
 resource "aws_iam_role" "nodes" {
-  name = "eks-node-group-nodes-fiap-fase-3"
+  name = "eks-node-group-nodes-fiap-fase-4"
 
   assume_role_policy = jsonencode({
     Statement = [{
@@ -50,9 +50,9 @@ resource "aws_eks_node_group" "private-nodes" {
   instance_types = ["t3.micro"]
 
   scaling_config {
-    desired_size = 1
+    desired_size = 2
     max_size     = 10
-    min_size     = 0
+    min_size     = 2
   }
 
   update_config {
@@ -60,7 +60,7 @@ resource "aws_eks_node_group" "private-nodes" {
   }
 
   labels = {
-    node = "kubenode-fiap-fase-3"
+    node = "kubenode-fiap-fase-4"
   }
 
   # taint {
